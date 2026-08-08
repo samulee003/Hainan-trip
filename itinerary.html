@@ -1,0 +1,7 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>海南島家庭旅行冊</title></head><body><p style="font-family:system-ui;padding:2rem">載入旅行冊中…</p><script>
+(async()=>{
+  const files = ['itinerary.part1.txt', 'itinerary.part2.txt', 'itinerary.part3.txt', 'itinerary.part4.txt'];
+  const parts = await Promise.all(files.map(f=>fetch(f).then(r=>{if(!r.ok) throw new Error(f); return r.text()})));
+  document.open(); document.write(parts.join('')); document.close();
+})().catch(()=>{document.body.innerHTML='<p style="font-family:system-ui;padding:2rem">載入失敗，請重新整理。</p>'});
+</script></body></html>
