@@ -30,12 +30,14 @@
         });
       });
 
+      // Only react when the layout actually crosses the breakpoint. Reacting to
+      // every resize left the menu stuck open on the way back down to mobile.
+      const mobile = window.matchMedia('(max-width: 47.99rem)');
+      let wasMobile = mobile.matches;
       window.addEventListener('resize', function () {
-        if (!window.matchMedia('(max-width: 47.99rem)').matches) {
-          setNavState(toggle, nav, true);
-        } else if (toggle.getAttribute('aria-expanded') !== 'true') {
-          nav.hidden = true;
-        }
+        if (mobile.matches === wasMobile) return;
+        wasMobile = mobile.matches;
+        setNavState(toggle, nav, !wasMobile);
       });
     });
   }
@@ -148,6 +150,35 @@
     }
   }
 
+  function todayKey() {
+    const now = new Date();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    return now.getFullYear() + '-' + month + '-' + day;
+  }
+
+  // Day nav links, home-page route cards and day cards all carry data-date,
+  // so one pass marks today wherever it appears.
+  function markToday() {
+    const matches = Array.from(document.querySelectorAll('[data-date="' + todayKey() + '"]'));
+    matches.forEach(function (el) {
+      el.classList.add('is-today');
+
+      if (el.classList.contains('day-nav__link')) {
+        el.setAttribute('aria-current', 'date');
+        return;
+      }
+
+      const host = el.querySelector('.route-item__title, .day-card__date');
+      if (!host || host.querySelector('.today-badge')) return;
+      const badge = document.createElement('span');
+      badge.className = 'today-badge';
+      badge.textContent = '今天';
+      host.appendChild(badge);
+    });
+    return matches;
+  }
+
   function setupDayNav() {
     const nav = document.querySelector('[data-day-nav]');
     if (!nav) return;
@@ -175,13 +206,7 @@
 
     // During the trip, open today's card automatically on first load.
     if (!window.location.hash) {
-      const now = new Date();
-      const month = now.getMonth() + 1;
-      const day = now.getDate();
-      const todayLink = Array.from(nav.querySelectorAll('a')).find(function (link) {
-        const date = link.querySelector('.day-nav__date');
-        return date && date.textContent.trim() === month + '/' + day;
-      });
+      const todayLink = nav.querySelector('a[data-date="' + todayKey() + '"]');
       if (todayLink) {
         const id = (todayLink.getAttribute('href') || '').split('#')[1];
         const target = document.getElementById(id);
@@ -198,9 +223,13 @@
 
   setupMobileNavigation();
   setupDisclosures();
+  // Initial disclosure state is applied, so the CSS that pre-hides collapsed
+  // panels can stand down and `hidden` can take over.
+  document.documentElement.setAttribute('data-js-ready', '1');
   setupPrintButtons();
   setupChecklist();
   setupHashState();
   setupLastLocation();
+  markToday();
   setupDayNav();
 }());

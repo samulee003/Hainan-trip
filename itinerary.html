@@ -1,7 +1,392 @@
-<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>海南島家庭旅行冊</title></head><body><p style="font-family:system-ui;padding:2rem">載入旅行冊中…</p><script>
-(async()=>{
-  const files = ['itinerary.part1.txt', 'itinerary.part2.txt', 'itinerary.part3.txt', 'itinerary.part4.txt'];
-  const parts = await Promise.all(files.map(f=>fetch(f).then(r=>{if(!r.ok) throw new Error(f); return r.text()})));
-  document.open(); document.write(parts.join('')); document.close();
-})().catch(()=>{document.body.innerHTML='<p style="font-family:system-ui;padding:2rem">載入失敗，請重新整理。</p>'});
-</script></body></html>
+<!DOCTYPE html>
+
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>9 天優化行程｜海南島家庭旅行冊</title>
+<meta content="海南島 9 天 8 晚逐日行程：每天的建議節奏、主活動、餐飲與住宿，一天一個主角。" name="description"/>
+<meta content="#1d3a5c" name="theme-color"/>
+<meta content="telephone=no" name="format-detection"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231d3a5c'/%3E%3Cpath d='M2 21c3.5 0 3.5-3 7-3s3.5 3 7 3 3.5-3 7-3 3.5 3 7 3' stroke='%23f2d9a8' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3Cpath d='M2 27c3.5 0 3.5-3 7-3s3.5 3 7 3 3.5-3 7-3 3.5 3 7 3' stroke='%237fb0d4' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='23' cy='9' r='4.5' fill='%23f2d9a8'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<meta content="website" property="og:type"/>
+<meta content="9 天優化行程｜海南島家庭旅行冊" property="og:title"/>
+<meta content="海南島 9 天 8 晚逐日行程：每天的建議節奏、主活動、餐飲與住宿，一天一個主角。" property="og:description"/>
+<meta content="海南島家庭旅行冊" property="og:site_name"/>
+<meta content="zh_Hant" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<link href="styles.css" rel="stylesheet"/>
+<script>document.documentElement.dataset.js="1"</script>
+</head>
+<body data-page="itinerary">
+<a class="skip-link" data-od-id="skip-link" href="#main-content">跳到主要內容</a>
+<header class="site-header" data-od-id="site-header">
+<div class="site-header__inner">
+<a class="wordmark" data-od-id="site-wordmark" href="index.html">
+        海南島 / 家庭旅行冊 <small>09 days · 2026</small>
+</a>
+<button aria-controls="site-nav" aria-expanded="false" class="menu-toggle" data-menu-toggle="" data-od-id="menu-toggle" type="button">開啟目錄</button>
+<nav aria-label="主要導覽" class="site-nav" data-od-id="site-nav" hidden="" id="site-nav">
+<a data-nav-link="" data-od-id="nav-home" href="index.html">總覽</a>
+<a aria-current="page" data-nav-link="" data-od-id="nav-itinerary" href="itinerary.html">9 天行程</a>
+<a data-nav-link="" data-od-id="nav-practical" href="practical-guide.html">實用指南</a>
+<a data-od-id="nav-print" href="#print">列印行程</a>
+</nav>
+</div>
+</header>
+<main id="main-content">
+<section class="page-intro shell" data-od-id="itinerary-intro" id="print">
+<p class="eyebrow eyebrow--sea">The full route / 01 — 09</p>
+<h1 data-od-id="itinerary-title">9 天，一天一件值得記住的事。</h1>
+<div class="page-intro__line">
+<p>行程進行中，這頁跟著實際狀況更新。D1–D3 把亞特蘭蒂斯一次玩夠；D4 分界洲沒去成、D5 只轉場到金普頓，<strong>分界洲補在 D6</strong>；<strong>D7 改成順路逛免稅城</strong>（呀諾達已拿掉），D8 留給大東海與鹿回頭。</p>
+<div class="button-row">
+<button class="button" data-od-id="print-itinerary" data-print="" type="button">列印這份行程</button>
+<a class="text-link" data-od-id="itinerary-to-guide" href="practical-guide.html#weather">先看天氣與備案</a>
+</div>
+</div>
+</section>
+<nav aria-label="每日行程快速跳轉" class="day-nav" data-day-nav="">
+<a class="day-nav__link" data-anchor-link="" data-date="2026-08-08" href="#day-1"><span class="day-nav__num">D1</span><span class="day-nav__date">8/8</span><span class="day-nav__label">抵達·亞特</span></a>
+<a class="day-nav__link" data-anchor-link="" data-date="2026-08-09" href="#day-2"><span class="day-nav__num">D2</span><span class="day-nav__date">8/9</span><span class="day-nav__label">水世界</span></a>
+<a class="day-nav__link" data-anchor-link="" data-date="2026-08-10" href="#day-3"><span class="day-nav__num">D3</span><span class="day-nav__date">8/10</span><span class="day-nav__label">轉場陵水</span></a>
+<a class="day-nav__link" data-anchor-link="" data-date="2026-08-11" href="#day-4"><span class="day-nav__num">D4</span><span class="day-nav__date">8/11</span><span class="day-nav__label">未成行</span></a>
+<a class="day-nav__link" data-anchor-link="" data-date="2026-08-12" href="#day-5"><span class="day-nav__num">D5</span><span class="day-nav__date">8/12</span><span class="day-nav__label">轉場金普頓</span></a>
+<a class="day-nav__link" data-anchor-link="" data-date="2026-08-13" href="#day-6"><span class="day-nav__num">D6</span><span class="day-nav__date">8/13</span><span class="day-nav__label">分界洲</span></a>
+<a class="day-nav__link" data-anchor-link="" data-date="2026-08-14" href="#day-7"><span class="day-nav__num">D7</span><span class="day-nav__date">8/14</span><span class="day-nav__label">免稅城</span></a>
+<a class="day-nav__link" data-anchor-link="" data-date="2026-08-15" href="#day-8"><span class="day-nav__num">D8</span><span class="day-nav__date">8/15</span><span class="day-nav__label">日落</span></a>
+<a class="day-nav__link" data-anchor-link="" data-date="2026-08-16" href="#day-9"><span class="day-nav__num">D9</span><span class="day-nav__date">8/16</span><span class="day-nav__label">趕海返程</span></a>
+</nav><section class="shell" data-od-id="trip-principles">
+<div class="callout callout--verify">
+<h4>這版行程只守四件事</h4>
+<p><strong>一天一個主活動</strong>｜<strong>午休是行程</strong>｜<strong>天氣與海況保留彈性</strong>｜<strong>Bonus 不是 KPI</strong>。少幾個 checkbox，換更多真正享受酒店、海邊和家庭時間的空間。</p>
+</div>
+</section>
+<div class="shell">
+<article class="day-card" data-date="2026-08-08" data-default-open="false" data-disclosure="" data-od-id="day-1" data-section="" id="day-1">
+<div class="day-card__header">
+<div class="day-card__topline"><span class="day-card__number">Day 1</span><span class="day-card__date">8/8（六）</span></div>
+<h2 class="day-card__title" data-od-id="day-1-heading">抵達三亞 → 亞特蘭蒂斯 → 水族館 → C 秀</h2>
+<p class="day-card__route">鳳凰機場 → 亞特蘭蒂斯（海棠灣）｜白天只負責抵達，晚上看 C 秀</p>
+<div><button aria-controls="day-1-body" aria-expanded="true" class="disclosure__trigger" data-disclosure-trigger="" data-od-id="day-1-toggle" type="button">收合 Day 1 細節</button></div>
+</div>
+<div class="day-card__body" data-disclosure-panel="" data-od-id="day-1-body" id="day-1-body">
+<div class="route-bar" data-od-id="day-1-route"><span class="r-item">鳳凰機場</span><span class="dot"></span><span class="r-item">亞特蘭蒂斯</span><span class="dot"></span><span class="r-item">失落的空間水族館</span><span class="dot"></span><span class="r-item">酒店晚餐</span><span class="dot"></span><span class="r-item">C 秀</span></div>
+<div class="timeline" data-od-id="day-1-timeline"><div class="timeline__title">建議節奏</div><div class="timeline__item"><span class="timeline__time">14:00 左右</span><span>抵達三亞、取車</span></div><div class="timeline__item"><span class="timeline__time">約 15:00</span><span>入住／寄存行李</span></div><div class="timeline__item"><span class="timeline__time">下午</span><span>失落的空間水族館</span></div><div class="timeline__item"><span class="timeline__time">18:00 左右</span><span>酒店晚餐</span></div><div class="timeline__item"><span class="timeline__time">晚上</span><span>C 秀（訂票時就選這一晚）</span></div></div>
+<div class="spot-list">
+<article class="spot" data-od-id="day-1-arrive-01">
+<div class="spot__head">
+<div class="spot__mark">01<br/>ARRIVE</div>
+<div><h3 class="spot__name">抵達＋取車</h3><div class="spot__facts"><span>先把人和行李安頓好</span></div></div>
+</div>
+<p class="spot__desc">第一天不追景點。完成取車後直接前往亞特蘭蒂斯，Check-in 未完成也可先寄存行李。</p>
+<p class="spot__tip"><strong>提示</strong>：把精神留給接下來兩整天的亞特蘭蒂斯。</p>
+</article>
+<article class="spot" data-od-id="day-1-sea-02">
+<div class="spot__head">
+<div class="spot__mark">02<br/>SEA</div>
+<div><h3 class="spot__name">失落的空間水族館</h3><div class="spot__facts"><span>下午主活動</span></div></div>
+</div>
+<p class="spot__desc">到酒店後只安排水族館，慢慢看、慢慢逛，不再加免稅城、市區或額外海灘活動。</p>
+<p class="spot__tip"><strong>提示</strong>：孩子若累了就提早回房，今天的成功標準是「舒服抵達」。</p>
+</article>
+<article class="spot" data-od-id="day-1-show-03">
+<div class="spot__head">
+<div class="spot__mark">03<br/>SHOW</div>
+<div><h3 class="spot__name">C 秀</h3><div class="spot__facts"><span>晚上主活動</span></div></div>
+</div>
+<p class="spot__desc">C 秀放在第一晚：白天只有水族館，體力還在，看完就直接回房睡覺，也把 D2、D3 的白天完整留給水世界。</p>
+<p class="spot__tip"><strong>提示</strong>：訂票時就選 8/8 這一晚。如果班機延誤或孩子撐不住，改訂 8/9 晚上是唯一備案——不要拖到 D3，那天要退房轉場。</p>
+</article></div>
+<div class="meal-block" data-od-id="day-1-meals"><div class="meal-block__label">餐飲安排 · 01</div><p>晚餐：酒店內解決最省力，並且要趕得上 C 秀開演。重點不是吃遍餐廳，而是讓全家在第一晚順利落地、洗澡、睡好。</p></div>
+<div class="hotel-block" data-od-id="day-1-hotel"><div class="hotel-block__label">住宿 · 01</div><p>三亞·亞特蘭蒂斯酒店｜連住 2 晚（8/10 中午退房）。</p></div>
+<div class="callout callout--verify" data-od-id="day-1-principle"><h4>今天不加</h4><p>免稅城、額外市區、額外海灘活動全部先放掉。白天只負責進入度假模式，晚上把 C 秀一次解決。</p></div>
+</div>
+</article>
+<article class="day-card" data-date="2026-08-09" data-default-open="false" data-disclosure="" data-od-id="day-2" data-section="" id="day-2">
+<div class="day-card__header">
+<div class="day-card__topline"><span class="day-card__number">Day 2</span><span class="day-card__date">8/9（日）</span></div>
+<h2 class="day-card__title" data-od-id="day-2-heading">亞特蘭蒂斯水世界 Full Resort Day</h2>
+<p class="day-card__route">全天留在亞特蘭蒂斯度假區｜完全不出園，午休是正式行程</p>
+<div><button aria-controls="day-2-body" aria-expanded="true" class="disclosure__trigger" data-disclosure-trigger="" data-od-id="day-2-toggle" type="button">收合 Day 2 細節</button></div>
+</div>
+<div class="day-card__body" data-disclosure-panel="" data-od-id="day-2-body" id="day-2-body">
+<div class="route-bar" data-od-id="day-2-route"><span class="r-item">酒店</span><span class="dot"></span><span class="r-item">水世界</span><span class="dot"></span><span class="r-item">午休</span><span class="dot"></span><span class="r-item">海豚／海獅</span><span class="dot"></span><span class="r-item">泳池／沙灘</span></div>
+<div class="timeline" data-od-id="day-2-timeline"><div class="timeline__title">建議節奏</div><div class="timeline__item"><span class="timeline__time">09:30–10:00</span><span>盡量一開園就進水世界</span></div><div class="timeline__item"><span class="timeline__time">約 12:00</span><span>午餐</span></div><div class="timeline__item"><span class="timeline__time">13:00–15:00</span><span>回房午休（正式行程，不是空白）</span></div><div class="timeline__item"><span class="timeline__time">下午</span><span>海豚／海獅互動，依孩子精神決定活動量</span></div><div class="timeline__item"><span class="timeline__time">傍晚</span><span>泳池、沙灘或再刷一次水世界，想做哪個就做哪個</span></div><div class="timeline__item"><span class="timeline__time">晚上</span><span>酒店晚餐，早點睡（明天還有半天可以玩）</span></div></div>
+<div class="spot-list">
+<article class="spot" data-od-id="day-2-water-03">
+<div class="spot__head">
+<div class="spot__mark">04<br/>WATER</div>
+<div><h3 class="spot__name">亞特蘭蒂斯水世界</h3><div class="spot__facts"><span>今天的主角</span></div></div>
+</div>
+<p class="spot__desc">上午集中玩水，先玩全家最想玩的設施，不以「把每個項目玩完」為目標——明天上午還會再來一次。</p>
+<p class="spot__tip"><strong>提示</strong>：開園前後入場，通常比中午才進去舒服。住客可無限次入園，玩累了隨時回房。</p>
+</article>
+<article class="spot" data-od-id="day-2-pause-05">
+<div class="spot__head">
+<div class="spot__mark">05<br/>PAUSE</div>
+<div><h3 class="spot__name">午餐＋午休</h3><div class="spot__facts"><span>必要行程</span></div></div>
+</div>
+<p class="spot__desc">中午回房沖澡、吃飯、休息。這一段不是空白，而是確保下午和晚上的情緒品質。</p>
+<p class="spot__tip"><strong>提示</strong>：如果孩子已經很累，下午互動活動可以縮短。</p>
+</article>
+<article class="spot" data-od-id="day-2-animal-06">
+<div class="spot__head">
+<div class="spot__mark">06<br/>ANIMAL</div>
+<div><h3 class="spot__name">海豚／海獅互動＋自由時段</h3><div class="spot__facts"><span>午休後不再趕場</span></div></div>
+</div>
+<p class="spot__desc">互動活動放在午休後。結束後不安排任何固定項目：泳池、沙灘、再刷一次水世界，或就待在房間，都算完成今天。</p>
+<p class="spot__tip"><strong>提示</strong>：C 秀昨晚已經看完，今天晚上是真正的空檔，別再往裡面塞東西。</p>
+</article></div>
+<div class="meal-block" data-od-id="day-2-meals"><div class="meal-block__label">餐飲安排 · 02</div><p>早餐與晚餐留在酒店；午餐以方便、快、能回房休息為優先。想吃奧西亞諾海底餐廳或 Bread Street Kitchen，今晚是最從容的一晚。</p></div>
+<div class="hotel-block" data-od-id="day-2-hotel"><div class="hotel-block__label">住宿 · 02</div><p>三亞·亞特蘭蒂斯酒店｜第 2 晚（明天中午退房）。</p></div>
+<div class="callout callout--verify" data-od-id="day-2-principle"><h4>今天的關鍵</h4><p>一整天不出園。午休視為必要行程，不是可有可無。</p></div>
+</div>
+</article>
+<article class="day-card" data-date="2026-08-10" data-default-open="false" data-disclosure="" data-od-id="day-3" data-section="" id="day-3">
+<div class="day-card__header">
+<div class="day-card__topline"><span class="day-card__number">Day 3</span><span class="day-card__date">8/10（一）</span></div>
+<h2 class="day-card__title" data-od-id="day-3-heading">亞特蘭蒂斯 Encore → 午餐後退房 → 陵水船屋</h2>
+<p class="day-card__route">亞特蘭蒂斯 → 陵水新村港｜上午再玩一次最喜歡的，下午舒服轉場</p>
+<div><button aria-controls="day-3-body" aria-expanded="true" class="disclosure__trigger" data-disclosure-trigger="" data-od-id="day-3-toggle" type="button">收合 Day 3 細節</button></div>
+</div>
+<div class="day-card__body" data-disclosure-panel="" data-od-id="day-3-body" id="day-3-body">
+<div class="route-bar" data-od-id="day-3-route"><span class="r-item">水世界 Encore</span><span class="dot"></span><span class="r-item">午餐＋退房</span><span class="dot"></span><span class="r-item">開往陵水</span><span class="dot"></span><span class="r-item">陵水船屋</span><span class="dot"></span><span class="r-item">新村港漁排</span></div>
+<div class="timeline" data-od-id="day-3-timeline"><div class="timeline__title">建議節奏</div><div class="timeline__item"><span class="timeline__time">早上</span><span>睡到自然醒、酒店早餐，行李先收好</span></div><div class="timeline__item"><span class="timeline__time">09:30–11:30</span><span>水世界或水族館 Encore：只玩最喜歡的那幾樣</span></div><div class="timeline__item"><span class="timeline__time">12:00</span><span>午餐，順便沖澡換衣服</span></div><div class="timeline__item"><span class="timeline__time">13:00</span><span>退房、取車出發（車程約 1 小時）</span></div><div class="timeline__item"><span class="timeline__time">14:30–15:00</span><span>入住陵水船屋，下午在民宿附近晃晃</span></div><div class="timeline__item"><span class="timeline__time">晚上</span><span>新村港漁排晚餐</span></div></div>
+<div class="spot-list">
+<article class="spot" data-od-id="day-3-encore-07">
+<div class="spot__head">
+<div class="spot__mark">07<br/>ENCORE</div>
+<div><h3 class="spot__name">亞特蘭蒂斯 Encore</h3><div class="spot__facts"><span>上午主活動</span></div></div>
+</div>
+<p class="spot__desc">住客可以無限次入園，所以最後一個上午不排新東西——回去玩前兩天全家最喜歡的那一兩樣，玩完就走，沒有遺憾。</p>
+<p class="spot__tip"><strong>提示</strong>：早上先把行李打包好、寄放在櫃檯，玩完直接沖澡吃飯上車，不用再上樓折返。</p>
+</article>
+<article class="spot" data-od-id="day-3-stay-08">
+<div class="spot__head">
+<div class="spot__mark">08<br/>STAY</div>
+<div><h3 class="spot__name">陵水船屋＋新村港</h3><div class="spot__facts"><span>下午轉場</span></div></div>
+</div>
+<p class="spot__desc">下午 3 點前就入住，比原本傍晚才到多出半個下午。晚上在漁排吃海鮮，不安排第二個正式景點。</p>
+<p class="spot__tip"><strong>提示</strong>：早點到的好處是天還亮著——先熟悉船屋環境與上下船動線，帶小孩會安心很多。</p>
+</article></div>
+<div class="meal-block" data-od-id="day-3-meals"><div class="meal-block__label">餐飲安排 · 03</div><p>午餐：亞特蘭蒂斯園區內解決，吃完直接退房。晚餐：新村港漁排海鮮。</p></div>
+<div class="hotel-block" data-od-id="day-3-hotel"><div class="hotel-block__label">住宿 · 03</div><p>暮嶼嵐·蜈家故事船屋民宿｜連住 2 晚。</p></div>
+<div class="callout callout--verify" data-od-id="day-3-principle"><h4>為什麼不排蜈支洲島</h4><p>原本 D3 是「07:30 退房 → 蜈支洲一整天 → 傍晚才到船屋」，等於在兩個海島日（D3、D4）之間完全沒有喘息，還要拖著行李轉場。改成 Encore 之後：亞特蘭蒂斯玩得更徹底、轉場更輕鬆，D4 分界洲也才有體力好好玩。</p></div>
+</div>
+</article>
+<article class="day-card" data-date="2026-08-11" data-default-open="false" data-disclosure="" data-od-id="day-4" data-section="" id="day-4">
+<div class="day-card__header">
+<div class="day-card__topline"><span class="day-card__number">Day 4</span><span class="day-card__date">8/11（二）</span></div>
+<h2 class="day-card__title" data-od-id="day-4-heading">分界洲島（未成行）→ 已改到 8/13</h2>
+<p class="day-card__route">原訂：船屋 → 分界洲島 → 新村港｜這天沒有上島</p>
+<div><button aria-controls="day-4-body" aria-expanded="true" class="disclosure__trigger" data-disclosure-trigger="" data-od-id="day-4-toggle" type="button">收合 Day 4 細節</button></div>
+</div>
+<div class="day-card__body" data-disclosure-panel="" data-od-id="day-4-body" id="day-4-body">
+<div class="callout callout--sand" data-od-id="day-4-status"><h4>這天的實際狀況</h4><p>分界洲島這天沒有去成，已經改到 <a href="#day-6">8/13</a>——票價、船班與當天節奏都整理在那張卡上。下面的內容保留，順序和注意事項一樣適用。</p></div>
+<div class="route-bar" data-od-id="day-4-route"><span class="r-item">船屋</span><span class="dot"></span><span class="r-item">分界洲島</span><span class="dot"></span><span class="r-item">回船屋</span><span class="dot"></span><span class="r-item">新村港晚餐／夜市</span></div>
+<div class="timeline" data-od-id="day-4-timeline"><div class="timeline__title">建議節奏</div><div class="timeline__item"><span class="timeline__time">08:30</span><span>抵達分界洲</span></div><div class="timeline__item"><span class="timeline__time">09:00–15:30</span><span>島上活動</span></div><div class="timeline__item"><span class="timeline__time">16:00 左右</span><span>離島</span></div><div class="timeline__item"><span class="timeline__time">17:00</span><span>回船屋洗澡休息</span></div><div class="timeline__item"><span class="timeline__time">18:30</span><span>新村港吃飯／夜市</span></div></div>
+<div class="spot-list">
+<article class="spot" data-od-id="day-4-island-09">
+<div class="spot__head">
+<div class="spot__mark">09<br/>ISLAND</div>
+<div><h3 class="spot__name">分界洲島</h3><div class="spot__facts"><span>今天的主角</span></div></div>
+</div>
+<p class="spot__desc">推薦順序：魔鬼魚 → 海洋劇場 → 觀光車 → 午餐 → 沙灘／浮潛。偏海洋動物、觀光與慢海島，強度比水世界低。</p>
+<p class="spot__tip"><strong>提示</strong>：若 8/13 決定要去，從金普頓出發比從船屋出發遠一些，早餐後就要動身，並且前一晚先確認開航。</p>
+</article>
+<article class="spot" data-od-id="day-4-bonus-10">
+<div class="spot__head">
+<div class="spot__mark">10<br/>BONUS</div>
+<div><h3 class="spot__name">趕海</h3><div class="spot__facts"><span>Bonus，不是 KPI</span></div></div>
+</div>
+<p class="spot__desc">若天氣、潮汐、體力都剛好，可在傍晚安排 30–60 分鐘。任何一項不理想就直接取消。</p>
+<p class="spot__tip"><strong>提示</strong>：趕海不需要為了「排進去」而犧牲洗澡、晚餐和睡眠。</p>
+</article></div>
+<div class="meal-block" data-od-id="day-4-meals"><div class="meal-block__label">餐飲安排 · 04</div><p>午餐：島上簡單吃。晚餐：新村港／夜市，回到陸地後慢慢吃。</p></div>
+<div class="hotel-block" data-od-id="day-4-hotel"><div class="hotel-block__label">住宿 · 04</div><p>暮嶼嵐·蜈家故事船屋民宿｜第 2 晚。</p></div>
+<div class="callout callout--verify" data-od-id="day-4-principle"><h4>夜釣已刪除</h4><p>不把夜釣列為正式行程。全家狀態很好、天氣又合適時，才臨時問船家是否有短程體驗。</p></div>
+</div>
+</article>
+<article class="day-card" data-date="2026-08-12" data-default-open="false" data-disclosure="" data-od-id="day-5" data-section="" id="day-5">
+<div class="day-card__header">
+<div class="day-card__topline"><span class="day-card__number">Day 5</span><span class="day-card__date">8/12（三）</span></div>
+<h2 class="day-card__title" data-od-id="day-5-heading">船屋退房 → 入住清水灣金普頓</h2>
+<p class="day-card__route">船屋 → 金普頓｜今天只做一件事：換酒店</p>
+<div><button aria-controls="day-5-body" aria-expanded="true" class="disclosure__trigger" data-disclosure-trigger="" data-od-id="day-5-toggle" type="button">收合 Day 5 細節</button></div>
+</div>
+<div class="day-card__body" data-disclosure-panel="" data-od-id="day-5-body" id="day-5-body">
+<div class="route-bar" data-od-id="day-5-route"><span class="r-item">船屋</span><span class="dot"></span><span class="r-item">新村港午餐</span><span class="dot"></span><span class="r-item">金普頓</span><span class="dot"></span><span class="r-item">Resort time</span></div>
+<div class="timeline" data-od-id="day-5-timeline"><div class="timeline__title">建議節奏</div><div class="timeline__item"><span class="timeline__time">上午</span><span>慢慢收行李、船屋退房，不趕時間</span></div><div class="timeline__item"><span class="timeline__time">中午</span><span>新村港午餐</span></div><div class="timeline__item"><span class="timeline__time">下午</span><span>前往金普頓、Check-in</span></div><div class="timeline__item"><span class="timeline__time">下午到晚上</span><span>泳池／兒童俱樂部／沙灘／房間休息</span></div></div>
+<div class="spot-list">
+<article class="spot" data-od-id="day-5-move-11">
+<div class="spot__head">
+<div class="spot__mark">11<br/>MOVE</div>
+<div><h3 class="spot__name">轉場：船屋 → 金普頓</h3><div class="spot__facts"><span>今天唯一的任務</span></div></div>
+</div>
+<p class="spot__desc">今天不排景點，只把人和行李從陵水新村港移到清水灣。原訂的南灣猴島＋呆呆島取消。</p>
+<p class="spot__tip"><strong>提示</strong>：連著兩天沒有大行程，正好把體力補回來——明天要不要去分界洲，取決於今天休息得夠不夠。</p>
+</article>
+<article class="spot" data-od-id="day-5-resort-12">
+<div class="spot__head">
+<div class="spot__mark">12<br/>RESORT</div>
+<div><h3 class="spot__name">金普頓下午</h3><div class="spot__facts"><span>正式降速</span></div></div>
+</div>
+<p class="spot__desc">Check-in 後不再排正式景點。泳池、兒童俱樂部、沙灘、房間休息，想做哪個就做哪個。</p>
+<p class="spot__tip"><strong>提示</strong>：今天睡飽一點，明天才有本錢決定要不要上島。</p>
+</article></div>
+<div class="meal-block" data-od-id="day-5-meals"><div class="meal-block__label">餐飲安排 · 05</div><p>12:30 新村港午餐；晚餐留在酒店內或附近。</p></div>
+<div class="hotel-block" data-od-id="day-5-hotel"><div class="hotel-block__label">住宿 · 05</div><p>海南清水灣金普頓酒店｜連住 2 晚。</p></div>
+<div class="callout callout--verify" data-od-id="day-5-principle"><h4>今天不塞</h4><p>陸龜農場、港灣遊等加碼不再列為必做。把空白真正還給酒店。</p></div>
+</div>
+</article>
+<article class="day-card" data-date="2026-08-13" data-default-open="false" data-disclosure="" data-od-id="day-6" data-section="" id="day-6">
+<div class="day-card__header">
+<div class="day-card__topline"><span class="day-card__number">Day 6</span><span class="day-card__date">8/13（四）</span></div>
+<h2 class="day-card__title" data-od-id="day-6-heading">分界洲島 → 傍晚回金普頓</h2>
+<p class="day-card__route">金普頓 → 分界洲島 → 金普頓｜補回 8/11 沒去成的那一天</p>
+<div><button aria-controls="day-6-body" aria-expanded="true" class="disclosure__trigger" data-disclosure-trigger="" data-od-id="day-6-toggle" type="button">收合 Day 6 細節</button></div>
+</div>
+<div class="day-card__body" data-disclosure-panel="" data-od-id="day-6-body" id="day-6-body">
+<div class="callout callout--sand" data-od-id="day-6-tonight"><h4>今晚要做完的兩件事</h4><p><strong>① 查開航公告</strong>——碼頭電話或官方公眾號。8/13 預報雨轉陰，風浪不對就直接停航，這一票最大。<br/><strong>② 決定早鳥票買不買</strong>——早鳥要提前一天買，也就是今晚截止。但多數早鳥票不可退，如果還沒完全確定會去，寧可明天現場買，多花幾十塊換彈性。</p></div>
+<div class="route-bar" data-od-id="day-6-route"><span class="r-item">金普頓早餐</span><span class="dot"></span><span class="r-item">分界洲碼頭</span><span class="dot"></span><span class="r-item">上島</span><span class="dot"></span><span class="r-item">回金普頓</span></div>
+<div class="timeline" data-od-id="day-6-timeline"><div class="timeline__title">建議節奏</div><div class="timeline__item"><span class="timeline__time">今晚</span><span>查開航公告；決定要不要買早鳥票</span></div><div class="timeline__item"><span class="timeline__time">早餐後</span><span>直接出發，別拖——從金普頓出發比從船屋遠</span></div><div class="timeline__item"><span class="timeline__time">08:30 左右</span><span>趕第一批船上島</span></div><div class="timeline__item"><span class="timeline__time">島上</span><span>魔鬼魚 → 海洋劇場 → 觀光車 → 午餐 → 沙灘／浮潛</span></div><div class="timeline__item"><span class="timeline__time">16:00 前</span><span>開始下島（末班：最晚上島 17:30、離島 18:00）</span></div><div class="timeline__item"><span class="timeline__time">晚上</span><span>回金普頓，酒店附近慢慢吃飯</span></div></div>
+<div class="spot-list">
+<article class="spot" data-od-id="day-6-island-13">
+<div class="spot__head">
+<div class="spot__mark">13<br/>ISLAND</div>
+<div><h3 class="spot__name">分界洲島</h3><div class="spot__facts"><span>今天的主角</span><span>全程唯一海島日</span></div></div>
+</div>
+<p class="spot__desc">順序照 <a href="#day-4">Day 4</a> 那張卡：魔鬼魚 → 海洋劇場 → 觀光車 → 午餐 → 沙灘／浮潛。偏海洋動物與觀光，強度不高，但來回車程加船程會吃掉不少時間，所以早出發是關鍵。</p>
+<p class="spot__tip"><strong>觀光車是單向的</strong>：¥40／人、共 4 站，第 4 站上車只能回起點，不能中途折返。建議在第 3 站（最高點）或第 4 站（觀景平台）下來走。</p>
+<p class="spot__pitfall"><strong>海洋劇場不含在基礎門票裡</strong>，要另外買或直接買含它的套票。只買基礎票等於「看海」，不是「玩海」——你們的行程順序裡有海洋劇場，記得買對票種。</p>
+</article>
+<article class="spot" data-od-id="day-6-tickets-14">
+<div class="spot__head">
+<div class="spot__mark">14<br/>TICKET</div>
+<div><h3 class="spot__name">票種與價格（行情參考）</h3><div class="spot__facts"><span>非即時報價</span><span>以 App 當下顯示為準</span></div></div>
+</div>
+<p class="spot__desc"><strong>基礎門票</strong>（含往返船票）旺季限價 ¥132／人，OTA 早鳥約 ¥117–122（需提前一天）。<br/><strong>套票 ¥233</strong>：門票＋往返船票＋海洋劇場＋贈熱帶魚餵食——四大四小要玩海洋劇場的話，這個最划算。<br/><strong>半潛艇套票 ¥337 起</strong>：含海底觀光半潛艇，贈海洋劇場。<br/><strong>觀光車 ¥40／人</strong>，另計。</p>
+<p class="spot__pitfall"><strong>先量小孩身高再買票</strong>：1.2 米是分水嶺，而且網路上的說法互相矛盾——有的寫 1.2 米以下免票（上島免票則觀光車也免票），有的寫 0.7–1.19 米要買兒童票。海洋劇場則是 1.2 米以下免票入場但需購票成人陪同，且海上娛樂項目一律無優惠票。六到八歲差不多就卡在這條線上，差額不小，買票前在 App 的票種說明裡確認清楚。</p>
+</article></div>
+<div class="callout callout--sea" data-od-id="day-6-fallback"><h4>停航的話</h4><p>不要在碼頭乾等，也不要臨時找景點替代。兩個現成的備案：<strong>清水灣包船出海</strong>（上午自由燈塔＋會唱歌的沙灘拍照，09:00–12:00 出海，中午回酒店；同樣看海況，風力 5 級以上不去），或<strong>什麼都不去</strong>——泳池、兒童俱樂部、沙灘、午休。今天是金普頓唯一的完整一天，留在酒店一點都不浪費。</p></div>
+<div class="meal-block" data-od-id="day-6-meals"><div class="meal-block__label">餐飲安排 · 06</div><p>午餐在島上簡單吃（島上餐飲選擇不多、價格偏高，可以帶點小孩的零食上船）。晚餐回金普頓附近，不為找名店再開一段車。</p></div>
+<div class="hotel-block" data-od-id="day-6-hotel"><div class="hotel-block__label">住宿 · 06</div><p>海南清水灣金普頓酒店｜第 2 晚。</p></div>
+<div class="callout callout--verify" data-od-id="day-6-principle"><h4>今天的標準</h4><p>早點出門、早點下島，晚上大家還有力氣笑，就算成功。島上不用把每個加購項目都解鎖——真的累了就提早回酒店，這不是損失。</p></div>
+</div>
+</article>
+<article class="day-card" data-date="2026-08-14" data-default-open="false" data-disclosure="" data-od-id="day-7" data-section="" id="day-7">
+<div class="day-card__header">
+<div class="day-card__topline"><span class="day-card__number">Day 7</span><span class="day-card__date">8/14（五）</span></div>
+<h2 class="day-card__title" data-od-id="day-7-heading">金普頓退房 → 海棠灣免稅城 → 大東海傲途格</h2>
+<p class="day-card__route">清水灣 → 海棠灣 → 大東海｜一路往南，不走回頭路</p>
+<div><button aria-controls="day-7-body" aria-expanded="true" class="disclosure__trigger" data-disclosure-trigger="" data-od-id="day-7-toggle" type="button">收合 Day 7 細節</button></div>
+</div>
+<div class="day-card__body" data-disclosure-panel="" data-od-id="day-7-body" id="day-7-body">
+<div class="route-bar" data-od-id="day-7-route"><span class="r-item">金普頓</span><span class="dot"></span><span class="r-item">海棠灣免稅城</span><span class="dot"></span><span class="r-item">大東海傲途格</span></div>
+<div class="timeline" data-od-id="day-7-timeline"><div class="timeline__title">建議節奏</div><div class="timeline__item"><span class="timeline__time">08:30</span><span>金普頓早餐＋退房</span></div><div class="timeline__item"><span class="timeline__time">上午</span><span>開往海棠灣，行李留車上</span></div><div class="timeline__item"><span class="timeline__time">中午</span><span>免稅城裡吃午餐（有美食街，冷氣足）</span></div><div class="timeline__item"><span class="timeline__time">下午</span><span>逛免稅城，累了就分批休息</span></div><div class="timeline__item"><span class="timeline__time">傍晚</span><span>往大東海，入住傲途格</span></div><div class="timeline__item"><span class="timeline__time">晚上</span><span>酒店／大東海附近吃飯</span></div></div>
+<div class="spot-list">
+<article class="spot" data-od-id="day-7-shopping-15">
+<div class="spot__head">
+<div class="spot__mark">15<br/>SHOP</div>
+<div><h3 class="spot__name">海棠灣免稅城</h3><div class="spot__facts"><span>今天的主活動</span><span>室內冷氣</span></div></div>
+</div>
+<p class="spot__desc">在清水灣往大東海的路上，順路不繞。8/14 預報下雨，室內行程剛好；小孩逛累了有休息區與餐飲區，兩家大人也可以輪流顧小孩、輪流逛。</p>
+<p class="spot__tip"><strong>三樣東西一定要帶在身上</strong>：護照、8/16 的離島機票（30 天內有效）、先註冊好的 cdf 會員。少一樣就結不了帳。</p>
+<p class="spot__pitfall"><strong>提貨要提早想</strong>：離島免稅多數是機場提貨，不是當場帶走。8/16 班機若是下午，機場提貨要另外抓時間——<a href="#day-9">Day 9</a> 的返程節奏已經留了這段。想當場帶走就問清楚哪些櫃位可以「即購即提」。</p>
+</article>
+<article class="spot" data-od-id="day-7-stay-16">
+<div class="spot__head">
+<div class="spot__mark">16<br/>STAY</div>
+<div><h3 class="spot__name">大東海傲途格</h3><div class="spot__facts"><span>傍晚只入住</span></div></div>
+</div>
+<p class="spot__desc">逛完直接南下入住，不再加景點。洗澡、吃飯、看海，讓轉場日乾淨收尾。</p>
+<p class="spot__tip"><strong>提示</strong>：鹿回頭留給 D8 的日落與藍調時刻。</p>
+</article></div>
+<div class="meal-block" data-od-id="day-7-meals"><div class="meal-block__label">餐飲安排 · 07</div><p>午餐在免稅城的美食街解決（旁邊海棠 68 環球美食街有椰小雞·椰子雞）；晚餐在酒店或大東海附近，阿浪海鮮、萌噠噠椰子雞都在大東海。</p></div>
+<div class="hotel-block" data-od-id="day-7-hotel"><div class="hotel-block__label">住宿 · 07</div><p>三亞綠發山海天酒店·傲途格精選｜連住 2 晚。</p></div>
+<div class="callout callout--verify" data-od-id="day-7-principle"><h4>呀諾達雨林已拿掉</h4><p>免稅城和呀諾達方向相反——一個在海邊往南、一個要往內陸繞，兩個都是半天以上的行程，同一天塞不下。既然決定先去免稅城，呀諾達就從正式行程移除。<br/>真的很想去雨林的話，唯一的位置是 8/15，但那天要從大東海來回內陸跑一趟，等於把最後的留白日換掉——不建議。</p></div>
+</div>
+</article>
+<article class="day-card" data-date="2026-08-15" data-default-open="false" data-disclosure="" data-od-id="day-8" data-section="" id="day-8">
+<div class="day-card__header">
+<div class="day-card__topline"><span class="day-card__number">Day 8</span><span class="day-card__date">8/15（六）</span></div>
+<h2 class="day-card__title" data-od-id="day-8-heading">大東海慢遊 → 午休 → 鹿回頭日落</h2>
+<p class="day-card__route">大東海／酒店 → 午休 → 鹿回頭｜整趟旅行的留白日</p>
+<div><button aria-controls="day-8-body" aria-expanded="true" class="disclosure__trigger" data-disclosure-trigger="" data-od-id="day-8-toggle" type="button">收合 Day 8 細節</button></div>
+</div>
+<div class="day-card__body" data-disclosure-panel="" data-od-id="day-8-body" id="day-8-body">
+<div class="route-bar" data-od-id="day-8-route"><span class="r-item">慢早晨</span><span class="dot"></span><span class="r-item">大東海／酒店</span><span class="dot"></span><span class="r-item">午休</span><span class="dot"></span><span class="r-item">鹿回頭日落</span><span class="dot"></span><span class="r-item">海鮮晚餐</span></div>
+<div class="timeline" data-od-id="day-8-timeline"><div class="timeline__title">建議節奏</div><div class="timeline__item"><span class="timeline__time">早上</span><span>睡晚一點、酒店早餐</span></div><div class="timeline__item"><span class="timeline__time">10:00–12:00</span><span>四選一：大東海／酒店泳池／海邊散步／咖啡店</span></div><div class="timeline__item"><span class="timeline__time">12:30</span><span>午餐</span></div><div class="timeline__item"><span class="timeline__time">14:00–16:00</span><span>回酒店午休</span></div><div class="timeline__item"><span class="timeline__time">17:00</span><span>鹿回頭，看日落並留到藍調時刻</span></div><div class="timeline__item"><span class="timeline__time">19:30</span><span>海鮮晚餐</span></div></div>
+<div class="spot-list">
+<article class="spot" data-od-id="day-8-slow-17">
+<div class="spot__head">
+<div class="spot__mark">17<br/>SLOW</div>
+<div><h3 class="spot__name">大東海慢遊</h3><div class="spot__facts"><span>上午不設 KPI</span></div></div>
+</div>
+<p class="spot__desc">看全家狀態四選一：大東海、酒店泳池、海邊散步、咖啡店。只選一個就好。</p>
+<p class="spot__tip"><strong>提示</strong>：睡晚一點不是浪費，是這趟 9 天行程刻意保留的恢復時間。</p>
+</article>
+<article class="spot" data-od-id="day-8-sunset-18">
+<div class="spot__head">
+<div class="spot__mark">18<br/>SUNSET</div>
+<div><h3 class="spot__name">鹿回頭</h3><div class="spot__facts"><span>傍晚主活動</span></div></div>
+</div>
+<p class="spot__desc">17:00 左右出發看日落，日落後不要急著走，留一點時間給藍調時刻與城市夜景。</p>
+<p class="spot__tip"><strong>提示</strong>：下午有午休，傍晚才會是「享受」，不是「撐完」。</p>
+</article></div>
+<div class="meal-block" data-od-id="day-8-meals"><div class="meal-block__label">餐飲安排 · 08</div><p>12:30 午餐；19:30 海鮮晚餐。</p></div>
+<div class="hotel-block" data-od-id="day-8-hotel"><div class="hotel-block__label">住宿 · 08</div><p>三亞綠發山海天酒店·傲途格精選｜最後一晚。</p></div>
+<div class="callout callout--verify" data-od-id="day-8-principle"><h4>今天真的沒有行程</h4><p>免稅城昨天已經逛完，所以今天不再有「順便去買東西」這個選項。剩下的只有大東海、酒店泳池、海邊散步、咖啡店——四選一，選一個就好，傍晚留給鹿回頭。</p></div>
+</div>
+</article>
+<article class="day-card" data-date="2026-08-16" data-default-open="false" data-disclosure="" data-od-id="day-9" data-section="" id="day-9">
+<div class="day-card__header">
+<div class="day-card__topline"><span class="day-card__number">Day 9</span><span class="day-card__date">8/16（日）</span></div>
+<h2 class="day-card__title" data-od-id="day-9-heading">小東海趕海 → 早餐 → 退房 → 機場</h2>
+<p class="day-card__route">小東海 → 大東海酒店 → 鳳凰機場｜收尾日只做一件小事</p>
+<div><button aria-controls="day-9-body" aria-expanded="true" class="disclosure__trigger" data-disclosure-trigger="" data-od-id="day-9-toggle" type="button">收合 Day 9 細節</button></div>
+</div>
+<div class="day-card__body" data-disclosure-panel="" data-od-id="day-9-body" id="day-9-body">
+<div class="route-bar" data-od-id="day-9-route"><span class="r-item">小東海趕海</span><span class="dot"></span><span class="r-item">酒店早餐</span><span class="dot"></span><span class="r-item">退房／早午餐</span><span class="dot"></span><span class="r-item">還車</span><span class="dot"></span><span class="r-item">鳳凰機場</span></div>
+<div class="timeline" data-od-id="day-9-timeline"><div class="timeline__title">建議節奏</div><div class="timeline__item"><span class="timeline__time">07:00–08:30</span><span>小東海趕海</span></div><div class="timeline__item"><span class="timeline__time">09:00</span><span>回酒店早餐</span></div><div class="timeline__item"><span class="timeline__time">10:30</span><span>洗澡、整理行李</span></div><div class="timeline__item"><span class="timeline__time">11:00–11:30</span><span>退房</span></div><div class="timeline__item"><span class="timeline__time">11:30 左右</span><span>早午餐</span></div><div class="timeline__item"><span class="timeline__time">之後</span><span>直接前往機場、還車、值機／安檢</span></div></div>
+<div class="spot-list">
+<article class="spot" data-od-id="day-9-tide-19">
+<div class="spot__head">
+<div class="spot__mark">19<br/>TIDE</div>
+<div><h3 class="spot__name">小東海趕海</h3><div class="spot__facts"><span>最後一個家庭記憶點</span></div></div>
+</div>
+<p class="spot__desc">清晨玩 60–90 分鐘就好，結束後回酒店洗澡吃早餐，不再加大東海晨泳。</p>
+<p class="spot__tip"><strong>提示</strong>：趕海以當日潮汐與安全為準，看到漲潮就提早收。</p>
+</article>
+<article class="spot" data-od-id="day-9-depart-20">
+<div class="spot__head">
+<div class="spot__mark">20<br/>DEPART</div>
+<div><h3 class="spot__name">退房＋返程</h3><div class="spot__facts"><span>不要把最後一天變成衝刺</span></div></div>
+</div>
+<p class="spot__desc">11:30 左右吃早午餐後直接前往機場。若航班約 15:00，建議 12:30–13:00 左右已到還車點。</p>
+<p class="spot__tip"><strong>提示</strong>：8/14 在免稅城買的東西多半要在機場提貨，這段時間一定要抓進去——提貨櫃檯尖峰時段會排隊，比想像中久。提貨單與護照放在隨身包，不要塞進托運行李。</p>
+</article></div>
+<div class="meal-block" data-od-id="day-9-meals"><div class="meal-block__label">餐飲安排 · 09</div><p>早餐回酒店；11:30 左右早午餐；之後不再安排正式餐廳打卡。</p></div>
+<div class="hotel-block" data-od-id="day-9-hotel"><div class="hotel-block__label">住宿 · 09</div><p>今天返程。</p></div>
+<div class="callout callout--verify" data-od-id="day-9-principle"><h4>返程原則</h4><p>最後一天的緩衝，比多塞一個景點更值錢。</p></div>
+</div>
+</article>
+<section class="section section--tight" data-od-id="itinerary-notes" id="itinerary-notes">
+<div class="callout callout--sea">
+<h3 data-od-id="itinerary-notes-heading">行程頁使用方式</h3>
+<p>上面那排 Day 按鈕點哪天看哪天，其他會自動收起。列印時全部展開，導覽和按鈕會自動隱藏。</p>
+</div>
+</section>
+</div>
+</main>
+<footer class="footer shell" data-od-id="site-footer">
+<div class="footer__line">
+<p>海南家庭旅遊攻略 · 行程版本 2026/8/12（實況更新）· 天氣預報擷取自 2026/8/7 · 祝兩家 4 大 4 小旅途愉快！</p>
+<a class="back-to-top" data-od-id="itinerary-back-to-top" href="#main-content">回到頂部 ↑</a>
+</div>
+<p style="margin-top:1rem">祝 SAM 哥一家玩得開心</p>
+</footer>
+<script src="site.js"></script>
+</body>
+</html>

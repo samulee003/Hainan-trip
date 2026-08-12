@@ -1,3 +1,45 @@
+# 這個站是純靜態 HTML/CSS/JS，真正的原始檔就放在 repo 根目錄，可以直接讀、直接改。
+#
+# 舊版本把整個網站編碼成 site.b64.* 分塊、在 build 時解壓縮，
+# 結果其中一塊寫壞就整站部署失敗（而且真的發生了）。分塊已經刪除。
+#
+# build 仍然輸出到 dist/，維持這個站一直以來可用的發布結構；
+# 差別只在於現在是「複製檔案」而不是「解碼 base64」。
+# command 一定要明確寫出來：netlify.toml 沒寫的欄位會退回 Netlify UI 上的設定，
+# 而 UI 那邊可能還留著舊的解碼指令。
 [build]
-  command = "mkdir -p dist && cat site.b64.* | base64 -d | tar -xz -C dist"
+  command = "rm -rf dist && mkdir -p dist && cp index.html itinerary.html practical-guide.html styles.css site.js dist/"
   publish = "dist"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"
+
+# HTML 每次都重新驗證，行程改了就會馬上看到。
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/itinerary.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/practical-guide.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/styles.css"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/site.js"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
